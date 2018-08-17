@@ -1,7 +1,9 @@
 import React from 'react';
 
+import classes from './IndividualNavItems.css';
+
 const individualNavItems = (props) => (
-    <li>
+    <li className={classes.IndividualNavItems}>
         <a
             href={props.links}>
                 {props.children}
