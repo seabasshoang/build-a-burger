@@ -1,14 +1,17 @@
 import React from 'react';
 import { Navbar, Nav, NavItem} from 'react-bootstrap';
 import './NavigationBar.css';
+import Logo from '../../Logo/Logo';
 
-const navigationBar = () => (
+const navigationBar = (props) => (
     <Navbar>
         <Navbar.Header>
             <Navbar.Brand>
                 <a href="/">Build-a-Burger</a>
             </Navbar.Brand>
-            <Navbar.Toggle/>
+            <Navbar.Toggle>
+                <Logo />
+            </Navbar.Toggle>
         </Navbar.Header>
         <Navbar.Collapse>
             <Nav pullRight>
