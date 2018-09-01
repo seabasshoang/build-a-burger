@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Aux from '../../../hoc/Aux';
+import { Button, ButtonToolbar} from 'react-bootstrap';
 
 const orderSummary = (props) => {
     const ingredientSummary = Object.keys(props.ingredients)
@@ -17,8 +18,10 @@ const orderSummary = (props) => {
                 {ingredientSummary}
             </ul>
             
-            <p>Continue with purchase?</p>
-            
+            <ButtonToolbar>
+                <Button bsStyle="danger">RETURN TO BURGER BUILDER</Button>
+                <Button bsStyle="success">CONTINUE TO CHECKOUT</Button>
+            </ButtonToolbar>
         </Aux>
     );
 }; 
