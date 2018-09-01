@@ -16,10 +16,13 @@ const navigationBar = (props) => (
         <Navbar.Collapse>
             <Nav pullRight>
                 <NavItem eventKey={1} href="#">
-                    CONTACT
+                    STORES
                 </NavItem>
                 <NavItem eventKey={2} href="#">
                     CHECKOUT
+                </NavItem>
+                <NavItem eventKey={3} href="#">
+                    ABOUT
                 </NavItem>
             </Nav>
         </Navbar.Collapse> 
