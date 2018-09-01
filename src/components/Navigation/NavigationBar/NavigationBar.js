@@ -4,8 +4,8 @@ import './NavigationBar.css';
 import Logo from '../../Logo/Logo';
 
 const navigationBar = (props) => (
-    <Navbar>
-        <Navbar.Header>
+    <Navbar fixedTop>
+        <Navbar.Header >
             <Navbar.Brand>
                 <a href="/">Build-a-Burger</a>
             </Navbar.Brand>
