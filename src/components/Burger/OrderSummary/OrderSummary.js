@@ -19,7 +19,9 @@ const orderSummary = (props) => {
             </ul>
             
             <ButtonToolbar>
-                <Button bsStyle="danger">RETURN TO BURGER BUILDER</Button>
+                <Button 
+                    bsStyle="danger"
+                    onClick={props.modalClosed}>RETURN TO BURGER BUILDER</Button>
                 <Button bsStyle="success">CONTINUE TO CHECKOUT</Button>
             </ButtonToolbar>
         </Aux>
