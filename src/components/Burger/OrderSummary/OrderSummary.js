@@ -17,12 +17,15 @@ const orderSummary = (props) => {
             <ul>
                 {ingredientSummary}
             </ul>
+            <p><strong>Total Price: £{props.price.toFixed(2)}</strong></p>
             
             <ButtonToolbar>
                 <Button 
                     bsStyle="danger"
                     onClick={props.modalClosed}>RETURN TO BURGER BUILDER</Button>
-                <Button bsStyle="success">CONTINUE TO CHECKOUT</Button>
+                <Button 
+                    bsStyle="success"
+                    onClick={props.purchaseContinued}>CONTINUE TO CHECKOUT</Button>
             </ButtonToolbar>
         </Aux>
     );
