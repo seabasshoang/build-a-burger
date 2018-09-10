@@ -12,8 +12,9 @@ class ContactData extends Component {
          postCode: ''
      }
  }
-orderHandler = () = {
-    
+orderHandler = (event) => {
+    event.preventDefault();
+    console.log(this.props.ingredients);  
 }
 
  render () {
@@ -26,7 +27,7 @@ orderHandler = () = {
                  <input type="text" name="street" placeholder="Street Name" />
                  <input type="text" name="postcode" placeholder="Post Code" />
                 <ButtonToolbar style={{margin: '10px auto', width: '50%'}}>
-                    <Button bsStyle="success" clicked={this.orderHandler}>PLACE ORDER</Button>
+                    <Button bsStyle="success" onClick={this.orderHandler}>PLACE ORDER</Button>
                 </ButtonToolbar>
              </form>
          </div>
