@@ -14,10 +14,10 @@ const checkoutSummary = (props) => {
                 <ButtonToolbar style={{width: '50%', padding: '10px', margin: 'auto'}} >
                     <Button 
                     bsStyle="danger"
-                    >CANCEL</Button>
+                    onClick={props.checkoutCancelled}>CANCEL</Button>
                     <Button 
                     bsStyle="success"
-                    >CONTINUE</Button>
+                    onClick={props.checkoutContinued}>CONTINUE</Button>
                 </ButtonToolbar>
         </div>
     );
