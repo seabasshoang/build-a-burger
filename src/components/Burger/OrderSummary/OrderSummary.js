@@ -19,7 +19,7 @@ const orderSummary = (props) => {
             </ul>
             <p><strong>Total Price: £{props.price.toFixed(2)}</strong></p>
             
-            <ButtonToolbar>
+            <ButtonToolbar >
                 <Button 
                     bsStyle="danger"
                     onClick={props.modalClosed}>RETURN TO BURGER BUILDER</Button>
