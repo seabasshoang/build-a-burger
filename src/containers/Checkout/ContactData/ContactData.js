@@ -3,6 +3,7 @@ import { Button, ButtonToolbar } from 'react-bootstrap';
 
 import './ContactData.css';
 import axios from '../../../axios-orders';
+import Spinner from '../../../components/UI/Spinner/Spinner';
 
 class ContactData extends Component {
  state = {
@@ -35,6 +36,7 @@ orderHandler = (event) => {
         axios.post('orders.json', order)
              .then(response => {
                  this.setState({ loading: false });
+                 this.props.history.push('/');
              })
              .catch(error => {
                  this.setState({ loading: false });
@@ -42,10 +44,9 @@ orderHandler = (event) => {
 }
 
  render () {
-     return (
-         <div className="ContactData">
-             <h4>Enter your Contact Details</h4>
-             <form className="Input">
+
+    let form = (
+        <form className="Input">
                  <input type="text" name="name" placeholder="Your Name" />
                  <input type="email" name="email" placeholder="Your Email" />
                  <input type="text" name="street" placeholder="Street Name" />
@@ -54,6 +55,15 @@ orderHandler = (event) => {
                     <Button bsStyle="success" onClick={this.orderHandler}>PLACE ORDER</Button>
                 </ButtonToolbar>
              </form>
+    )
+    if (this.state.loading) {
+        form = <Spinner/>;
+    }
+
+     return (
+         <div className="ContactData">
+             <h4>Enter your Contact Details</h4>
+             {form}
          </div>
      );
  }
