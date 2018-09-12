@@ -4,10 +4,10 @@ import './BuildControls.css';
 import BuildControl from './BuildControl/BuildControl';
 
 const controls = [
-    { label: 'Salad', type: 'salad' },
-    { label: 'Bacon', type: 'bacon' },
-    { label: 'Cheese', type: 'cheese' },
-    { label: 'Meat', type: 'meat' }
+    { label: 'Salad (+50p)', type: 'salad' },
+    { label: 'Bacon (+70p)', type: 'bacon' },
+    { label: 'Cheese (+40p)', type: 'cheese' },
+    { label: 'Meat (+£1.30)', type: 'meat' }
 ]
 
 const buildControls = (props) => (
